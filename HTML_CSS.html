@@ -1,0 +1,43 @@
+<!-- CSS => Cascading Style Sheets  -->
+<!-- use css in three ways in html-->
+ <!-- 1. Inline styles -->
+ <!-- 2. Internal stylesheets -->
+ <!-- 3. External stylesheets -->
+
+<!--1.Inline css-->
+   <!-- Inline styles are applied directly to individual HTML elements using the style attribute.-->
+   Example:
+    <p style="color: blue; font-size: 16px;">This is an inline styled paragraph.</p>
+    
+<!--2.Internal css-->
+   <!-- Internal stylesheets are defined within the <style> tag in the <head> section of an HTML document.-->
+   Example:
+    <head>
+      <style>
+        p {
+          color: red;
+          font-size: 18px;
+        }
+      </style>
+    </head>
+    <body>
+      <p>This is an internally styled paragraph.</p>
+    </body>  
+    
+<a!--3.External css-->
+   <!-- External stylesheets are separate CSS files that are linked to an HTML document using the <link> tag.-->
+   Example:
+    <head>
+      <link rel="stylesheet" href="CCS_Explaination.css">
+    </head>
+    <body>
+      <p>This is an externally styled paragraph.</p>
+    </body>    
+
+    echo "# CSS_NOTES" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/mohanaaswath/CSS_NOTES.git
+git push -u origin main

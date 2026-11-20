@@ -1,0 +1,11 @@
+/* CSS => Cascading Style Sheets  */
+
+/* CSS is a stylesheet language used to describe the presentation of a document written in HTML or XML.
+ It allows you to control the layout, colors, fonts, and overall appearance of web pages. 
+ CSS works by applying styles to HTML elements through selectors, properties, and values.
+*/
+
+p{
+    color: blue;
+    background-color: lightgray;
+}

@@ -1,0 +1,213 @@
+<!--CSS Selectors are patterns used in CSS to select and target HTML elements so that styles can be applied to them. 
+They define which elements on a web page should receive specific styling rules.-->
+
+<!--Types of CSS Selectors-->
+<!--1. Universal Selector-->
+<!-- The universal selector (*) selects all elements on a web page.
+ It is often used to apply a common style to all elements or to reset default styles.-->
+ <!--Example:-->
+ <style>
+   * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+   }
+ </style>
+ <a href="#">This is a link</a>
+ <p>This is a paragraph.</p>
+
+<!--2. Type Selector-->
+<!-- The type selector (also known as the element selector) targets specific HTML elements by their tag-->
+ <!--Example:-->
+ <style>
+   p {
+     color: blue;
+     font-size: 16px;
+   }
+ </style>
+ <p>This is a paragraph styled using the type selector.</p>
+
+<!--3. Class Selector-->
+<!-- The class selector (.) targets elements with a specific class attribute. It allows you to apply styles to multiple elements that share the same class.-->
+ <!--Example:-->
+ <style>
+   .highlight {
+     background-color: yellow;
+     font-weight: bold;
+   }
+ </style>
+ <p class="highlight">This paragraph is highlighted using the class selector.</p>
+
+<!--4. ID Selector-->
+<!-- The ID selector (#) targets a specific element with a unique ID attribute. It is used to apply styles to a single element on the page.-->
+ <!--Example:-->
+ <style>
+   #unique {
+     color: red;
+     font-size: 20px;
+   }
+ </style>
+ <p id="unique">This paragraph is styled using the ID selector.</p> 
+
+
+<!--5. Attribute Selector-->
+<!-- The attribute selector targets elements based on the presence or value of their attributes. It allows you to style elements that have specific attributes or attribute values.-->
+ <!--Example:-->
+ <style>
+   a[target="_blank"] {
+     color: green;
+     text-decoration: underline;
+   }
+ </style>
+ <a href="https://example.com" target="_blank">This link opens in a new tab and is styled using the attribute selector.</a> 
+
+
+<!--6.Combinator Selectors-->
+<!-- Combinator selectors allow you to combine multiple selectors to target specific elements based on their relationship to other elements. -->
+ <!--Example:-->
+ <style>
+   p + p {
+     margin-top: 10px;
+   }
+ </style>
+ <p>This is the first paragraph.</p>
+ <p>This is the second paragraph, which will have a top margin.</p>
+
+<!--7. Pseudo-class Selectors-->
+<!-- Pseudo-class selectors target elements based on their state or position in the document. They allow you to apply styles to elements when they are in a specific state, such as when they are hovered over or focused. -->
+ <!--Example:-->
+ <style>
+   a:hover {
+     color: orange;
+   }
+ </style>
+ <a href="#">Hover over this link to see the effect.</a> 
+
+<!--8. Pseudo-element Selectors-->
+<!-- Pseudo-element selectors allow you to style specific parts of an element, such as the first letter or the first line of text. They are used to create special effects and enhance the appearance of elements. -->
+ <!--Example:-->
+ <style>
+   p::first-letter {
+     font-size: 24px;
+     color: purple;
+   }
+ </style>
+ <p>This paragraph has a larger and colored first letter.</p>
+ 
+ 
+
+<!--9. Grouping Selectors-->
+<!-- Grouping selectors allow you to apply the same styles to multiple elements by separating their selectors with commas. This helps reduce redundancy in your CSS code. -->
+ <!--Example:-->
+ <style>
+   h1, h2, h3 {
+     font-family: Arial, sans-serif;
+     color: navy;
+   }
+ </style>
+ <h1>This is a heading 1</h1>
+ <h2>This is a heading 2</h2>
+ <h3>This is a heading 3</h3>
+
+
+<!--10. Descendant Selector-->
+<!-- The descendant selector targets elements that are descendants of a specified element. It is used to apply styles to elements within a specific parent element. -->
+ <!--Example:-->
+ <style>
+   div p {
+     color: blue;
+   }
+ </style>
+ <div>
+   <p>This paragraph is inside a div and will be styled.</p>
+ </div>
+
+
+<!--11. Child Selector-->
+<!-- The child selector (>) targets elements that are direct children of a specified parent element. It allows you to apply styles to elements that are immediate children of a specific parent. -->
+ <!--Example:-->
+ <style>
+   div > p {
+     color: green;
+   }
+ </style>
+ <div>
+   <p>This paragraph is a direct child of the div and will be styled.</p>
+   <span>
+     <p>This paragraph is not a direct child of the div and will not be styled.</p>
+   </span>
+ </div>
+ 
+ 
+<!--All Selectors in One Big Example-->
+ <style>
+   * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+   }
+   p {
+     color: blue;
+     font-size: 16px;
+   }
+   .highlight {
+     background-color: yellow;
+     font-weight: bold;
+   }
+   #unique {
+     color: red;
+     font-size: 20px;
+   }
+   a[target="_blank"] {
+     color: green;
+     text-decoration: underline;
+   }
+   p + p {
+     margin-top: 10px;
+   }
+   a:hover {
+     color: orange;
+   }
+   p::first-letter {
+     font-size: 24px;
+     color: purple;
+   }
+   h1, h2, h3 {
+     font-family: Arial, sans-serif;
+     color: navy;
+   }
+   div p {
+     color: blue;
+   }
+   div > p {
+     color: green;
+   }
+ </style>
+ <html>
+   <head>
+     <title>CSS Selectors Example</title>
+   </head>
+   <body>
+     <h1>This is a heading 1</h1>
+     <h2>This is a heading 2</h2>
+     <h3>This is a heading 3</h3>
+
+     <p class="highlight">This paragraph is highlighted using the class selector.</p>
+     <p id="unique">This paragraph is styled using the ID selector.</p>
+
+     <a href="https://example.com" target="_blank">This link opens in a new tab and is styled using the attribute selector.</a>
+
+     <p>This is the first paragraph.</p>
+     <p>This is the second paragraph, which will have a top margin.</p>
+
+     <a href="#">Hover over this link to see the effect.</a>
+
+     <p>This paragraph has a larger and colored first letter.</p>
+
+     <div>
+       <p>This paragraph is inside a div and will be styled.</p>
+       <span>
+         <p>This paragraph is not a direct child of the div and will not be styled.</p>
+       </span>
+     </div>
+   </body>
